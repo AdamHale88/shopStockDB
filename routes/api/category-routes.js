@@ -3,11 +3,9 @@ const { Category, Product } = require("../../models");
 
 router.get("/", (req, res) => {
   Category.findAll({
-    include: [
-      {
-        model: Product,
-      },
-    ],
+    include: [{
+        model: Product
+      }]
   })
     .then(categoryData => {
       res.status(200).json(categoryData);
@@ -24,7 +22,7 @@ router.get("/:id", (req, res) => {
   Category.findByPk(id, {
     include: [
       {
-        model: Product,
+        model: Product
       },
     ],
   })

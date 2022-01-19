@@ -6,8 +6,8 @@ const { Product, Category, Tag, ProductTag } = require('../../models');
 // get all products
 router.get('/', async (req, res) => {
   try {
-    const productsData = await Product.findAll();
-    res.status(200).json(productsData);
+    const productData = await Product.findAll();
+    res.status(200).json(productData);
 
   } catch (err) {
     res.status(500).json(err);
@@ -19,7 +19,7 @@ router.get('/:id', async (req, res) => {
 
    try {
      const productData = await Product.findByPk(req.params.id);
-     res.status(200).json(gardensData);
+     res.status(200).json(productData);
    } catch (err) {
      res.status(500).json(err);
    }
@@ -28,7 +28,6 @@ router.get('/:id', async (req, res) => {
 // create new product
 router.post('/', (req, res) => {
 
-  
   Product.create(req.body, {
 
       product_name: "Basketball",
@@ -37,7 +36,6 @@ router.post('/', (req, res) => {
       tagIds: [1, 2, 3, 4]
 
     })
-    
     .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
       if (req.body.tagIds.length) {
@@ -108,4 +106,4 @@ router.delete('/:id', (req, res) => {
   res.status(200).send(`ProductTag deleted sucessfully!`);
 });
 
-module.exports = Router;
+module.exports = router;
