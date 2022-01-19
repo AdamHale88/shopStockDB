@@ -9,11 +9,7 @@
 ## Table of Contents 
 - [Features](#features)
 - [Credits](#credits)
-- [License](#license)
-
-
-## License
-n/a
+- [Installation](#license)
 
 ## Features
 ### Built With
@@ -22,8 +18,6 @@ n/a
 - sequelize
 - mysql 
 - insomnia
-
-
 
 <p> 
 
@@ -36,6 +30,29 @@ n/a
 
 </p> 
 
+## Installation
+
+<p>To get started we must choose out datatbase with Mysql.</p>
+
+```mysql
+mysql -u -root -p
+```
+Then we must tpye
+
+```mysql
+SOURCE db/schema.sql
+```
+This selects our Database we wish to use.
+
+```node
+npm run seed
+```
+This will seed out database with data.
+
+```node
+npm start
+```
+This initiates the server for us to query
 
 ## How to Contribute
 
