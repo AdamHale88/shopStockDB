@@ -38,7 +38,7 @@ router.get("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
   Category.create(req.body)
-    .then((category => {
+    .then(category => {
       res.status(200).send("Category Created Successfully!");
     })
     .catch(res.status(500));
