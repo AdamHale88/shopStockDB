@@ -1,10 +1,9 @@
-# <h1 align="center">Echo DB</h1>
-
+# <h1 align="center">ShopstockDB</h1>
 ## Description
 - [Working Version ](https://watch.screencastify.com/v/9ktzpXHTo8aks0ObwFnR "Live View")
 
 
-<p>E-Comerece Back End Express Server</p>
+<p>E-Comerece Back-End Express Server</p>
 
 ## Table of Contents 
 - [Features](#features)
